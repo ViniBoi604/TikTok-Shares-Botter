@@ -77,14 +77,14 @@ class TikTok:
         device_id = ''.join(random.choice('0123456789') for _ in range(19))
 
         data = (
-            f'action_time={action_time}&item_id={self.video_id}&item_type=1&share_delta=1&stats_cha'
-            'nnel=copy'
+            f'action_time={action_time}&item_id={self.video_id}&item_type=1&share_delta=1&stats_channel=copy'
         )
         headers = {
             'Content-Type': 'application/x-www-form-urlencoded',
             'x-common-params-v2': 'version_code=16.6.5&app_name=musical_ly&channel=App%20Store&devi'
                                   f'ce_id={device_id}&aid=1233&os_version=13.5.1&device_platform=ip'
-                                  'hone&device_type=iPhone10,5'
+                                  'hone&device_type=iPhone10,5',
+            'User-Agent': 'TikTok 16.6.5 rv:166515 (iPhone; iOS 13.6; en_US) Cronet',
         }
 
         try:
